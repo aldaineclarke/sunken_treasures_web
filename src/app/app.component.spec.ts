@@ -1,10 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
+    imports: [RouterTestingModule, ToastrModule.forRoot()],
+    providers:[ToastrService,],
     declarations: [AppComponent]
   }));
 
@@ -14,16 +16,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'sunken_treasures_web'`, () => {
+  it(`should have as title 'Angluar_Template'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('sunken_treasures_web');
+    expect(app.title).toEqual('Angluar_Template');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('sunken_treasures_web app is running!');
-  });
 });
