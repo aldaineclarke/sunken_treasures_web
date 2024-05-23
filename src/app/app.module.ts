@@ -17,12 +17,11 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    SharedModule,
     ToastrModule.forRoot({
       positionClass: 'toast-top-right',
       preventDuplicates:true
     }),
-
-    SharedModule
   ],
   providers: [
     httpInterceptorProviders,

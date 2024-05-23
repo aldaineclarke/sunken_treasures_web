@@ -1,0 +1,39 @@
+
+
+.bento-box-3{
+    width: 100%;
+    display:grid;
+    min-height: 50vh;
+    gap:1rem;
+    grid-template-areas: 
+            "slider slider notice"
+            "slider slider notice2"
+            ;
+}
+.bento-box-3 > div{
+    border-radius: 10px;
+    aspect-ratio: 16/9;
+}
+
+.bento-box-3 > div:nth-child(1){
+        grid-area: slider;
+        background-color: #5467c8;
+}
+.bento-box-3 > div:nth-child(2){
+        grid-area: notice;
+        background-color: #59639a;
+}
+.bento-box-3 >div:nth-child(3){
+        grid-area: notice2;
+        background-color: #1f93be;
+}
+
+.categories li{
+        padding: 5px 10px;
+        cursor: pointer;
+}
+
+.categories li.active{
+        @apply bg-accent text-white;
+
+}

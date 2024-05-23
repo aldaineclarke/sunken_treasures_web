@@ -4,6 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoadingComponent } from './components/loading/loading.component';
 import { ValidationComponent } from './components/validation/validation.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CardComponent } from './components/card/card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 const modules = [
@@ -12,14 +14,12 @@ const modules = [
 const declarations = [
   LoadingComponent,
   HeaderComponent,
+  CardComponent,
+  ValidationComponent,
+  FooterComponent
 ]
 @NgModule({
-  declarations: [
-    LoadingComponent,
-    HeaderComponent,
-    ValidationComponent,
-    HeaderComponent
-  ],
+  declarations: declarations,
   imports: [
     CommonModule,
     ...modules

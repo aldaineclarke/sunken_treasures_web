@@ -1,0 +1,54 @@
+<section class="mt-2 mx-auto container bento-box-3">
+    <div class="slider"></div>
+    <div class="notice"></div>
+    <div class="otherNotice"></div>
+</section>
+<section class="why-choose-us container mx-auto mt-16">
+    <h2 class="section-header text-3xl font-bold text-center">Why Sunken Treasures?</h2>
+    <p class="text-center mt-6 w-2/3 mx-auto">Choosing our platform means joining a community dedicated to smart, sustainable, and savvy shopping. With our carefully curated selection of quality second-hand items, you can discover unique treasures at affordable prices, all while contributing to a greener planet.</p>
+    <div class="cta flex justify-center mt-4">
+        <button class="primary-text-btn">Learn More</button>
+    </div>
+</section>
+<section class="mt-16 bg-slate-100 py-16">
+    <div class="container mx-auto">
+        <h2 class="section-header text-3xl font-bold text-center">Featured Products</h2>
+        <div class="cards flex gap-4 justify-center mt-10">
+            <app-card *ngFor="let product of [1,2,3,4,5]"></app-card>
+        </div>
+        <div class="cta flex justify-center mt-8">
+            <button class="primary-outline-btn">View All Products</button>
+        </div>
+    </div>
+
+</section>
+<section class="categories mt-10 py-16">
+    <div class="container mx-auto">
+        <h2 class="section-header text-3xl font-bold text-center">Find What You Need in No Time</h2>
+        <p class="mt-6 text-center w-2/3 mx-auto">
+            Whether you're hunting for a vintage gem or the latest tech gadget, our intuitive filters and smart recommendations make finding your perfect item a breeze. Dive into personalized categories, use dynamic search options, and enjoy a seamless, stress-free shopping experience. 
+        </p>
+        <div class="w-full mt-10">
+            <ul class="flex justify-center mb-6">
+                <li class="active">Departments</li>
+                <li>Categories</li>
+                <li>Condition</li>
+                <li>Deals</li>
+            </ul>
+
+            <div id="tab-content pt-6">
+                <div class="content-example w-full h-[50vh] bg-green-600">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta container mx-auto bg-secondary p-8 rounded-xl">
+    <h2 class="text-3xl text-white font-semibold">Pleased with what you see?</h2>
+    <p class="text-lg text-white mt-4">Become part of a community that values sustainability, smart shopping, and entrepreneurial spirit</p>
+    <div class="cta mt-4 flex justify-end">
+        <button class="primary-text-btn">Sign Up</button>
+    </div>
+
+</section>

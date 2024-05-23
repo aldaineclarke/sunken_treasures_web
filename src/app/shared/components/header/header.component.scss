@@ -1,0 +1,9 @@
+.upper-header li{
+    color: black;
+}
+.lower-header  li{
+    color:black;
+}
+.lower-header li.active{
+    @apply font-semibold text-red-500;
+}
