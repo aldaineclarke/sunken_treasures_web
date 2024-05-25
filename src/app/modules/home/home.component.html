@@ -29,18 +29,27 @@
             Whether you're hunting for a vintage gem or the latest tech gadget, our intuitive filters and smart recommendations make finding your perfect item a breeze. Dive into personalized categories, use dynamic search options, and enjoy a seamless, stress-free shopping experience. 
         </p>
         <div class="w-full mt-10">
-            <ul class="flex justify-center mb-6">
-                <li class="active">Departments</li>
-                <li>Categories</li>
-                <li>Condition</li>
-                <li>Deals</li>
-            </ul>
+                <div class="flex categories-wrapper  min-h-[50vh] p-4 ">
+                    <div class="electronic-cat w-[300px] bg-gray-300 flex flex-col p-4">
+                        <p class="feature-cat text-2xl text-black my-2 font-medium">Electronics</p>
+                        <img class="" src="assets/images/demo09-520x520.jpg.jpg" alt="Image of Electronic Category">
+                        <ul class="cat-links">
+                            <li>Earphones</li>
+                            <li>Smartphone</li>
+                            <li>Appliances</li>
+                            <li>Laptop & Computers</li>
+                            <li class="text-accent font-medium active">Search Electronics</li>
+                        </ul>
+                    </div>
+                    <div class="cards-wrapper px-4">
+                        <p class="cards-title text-black my-2 font-medium text-2xl">New in Electronics</p>
 
-            <div id="tab-content pt-6">
-                <div class="content-example w-full h-[50vh] bg-green-600">
-
+                        <div class="cards flex gap-4">
+                            <app-card *ngFor="let product of [1,2,3,4]"></app-card>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                
         </div>
     </div>
 </section>
