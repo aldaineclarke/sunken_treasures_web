@@ -40,14 +40,16 @@
                             <li>Smartphone</li>
                             <li>Appliances</li>
                             <li>Laptop & Computers</li>
-                            <li class="text-accent font-medium active">Search Electronics</li>
+                            <li class="text-accent font-medium active hover:text-primary">Search Electronics</li>
                         </ul>
                     </div>
-                    <div class="cards-wrapper px-4 overflow-x-scroll  custom-scrollbar">
+                    <div class=" flex flex-col overflow-hidden">
                         <p class="cards-title text-black my-2 font-medium text-2xl">New in Electronics</p>
+                        <div class="cards-wrapper w-full  px-4 overflow-x-scroll  custom-scrollbar">
 
-                        <div class="cards flex gap-4 py-4">
-                            <app-card *ngFor="let product of [1,2,3,4]"></app-card>
+                            <div class="cards flex gap-4 py-4">
+                                <app-card *ngFor="let product of [1,2,3,4]"></app-card>
+                            </div>
                         </div>
                     </div>
                 </div>
