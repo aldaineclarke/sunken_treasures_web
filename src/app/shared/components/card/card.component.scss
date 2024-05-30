@@ -1,5 +1,5 @@
 .card{
-    height: 400px;
+    height: 350px;
     aspect-ratio: 2/3;
     transition: box-shadow 300ms;
     background-color: #fff;
@@ -28,3 +28,4 @@
     @apply inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-800 ring-1 ring-inset ring-yellow-600/20;
 
 }
+

@@ -11,7 +11,7 @@
 
 .bento-box-3>div {
         border-radius: 10px;
-        aspect-ratio: 16/9;
+
 }
 
 .bento-box-3>div:nth-child(1) {
@@ -47,7 +47,7 @@
 .electronic-cat {
         aspect-ratio: 2/3;
         padding: 0 1rem;
-        height: 100%;
+        align-self: stretch;
 
         img {
                 height:100px;
