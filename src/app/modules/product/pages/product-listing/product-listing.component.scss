@@ -1,5 +1,11 @@
 #st-prod{
     display:grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 250px auto;
     width: 100%;
+}
+.seller-chip{
+    padding: 10px 15px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    font-size:.8rem;
 }
