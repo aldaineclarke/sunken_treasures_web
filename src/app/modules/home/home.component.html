@@ -1,7 +1,15 @@
 <section class="mt-2 mx-auto container bento-box-3">
-    <div class="slider"></div>
-    <div class="notice"></div>
-    <div class="otherNotice"></div>
+    <div class="slider">
+        <img src="assets/images/main banner.jpg" class="h-full w-full inline-block object-cover object-center" alt="main banner image">
+    </div>
+    <div class="notice">
+        <img src="assets/images/electronic advert.jpg" class="h-full w-full inline-block object-cover object-center" alt="main banner image">
+
+    </div>
+    <div class="otherNotice">
+        <img src="assets/images/jewelry advert.jpg" class="h-full w-full inline-block object-cover object-center" alt="main banner image">
+
+    </div>
 </section>
 <section class="why-choose-us container mx-auto mt-16">
     <h2 class="section-header text-3xl font-bold text-center">Why Sunken Treasures?</h2>
@@ -14,7 +22,7 @@
     <div class="container mx-auto">
         <h2 class="section-header text-3xl font-bold text-center">Featured Products</h2>
         <div class="cards-wrapper overflow-x-scroll custom-scrollbar">
-            <div class="cards flex gap-4 mt-10 py-4">
+            <div class="cards flex lg:justify-center gap-4 mt-10 py-4">
                 <app-card *ngFor="let product of [1,2,3,4,5]"></app-card>
             </div>
         </div>
@@ -24,7 +32,18 @@
     </div>
 
 </section>
-<section class="categories mt-10 py-16">
+<section >
+    <div class="flex h-[80vh]">
+        <div class="fp-advert1" class="relative w-1/2">
+            <img class="w-full h-full object-cover object-center  top-0 left-0" src="assets/images/female-shoes.jpg" alt="image of full width advert">
+        </div>
+        <div class="fp-advert2" class="relative w-1/2">
+            <img class="w-full h-full object-cover object-center absolute top-0 left-0" src="assets/images/male-shoes.jpg" alt="image of full width advert">
+        </div>
+    </div>
+    
+</section>
+<section class="categories mt-10 py-16 hidden">
     <div class="container mx-auto">
         <h2 class="section-header text-3xl font-bold text-center">Find What You Need in No Time</h2>
         <p class="mt-6 text-center w-2/3 mx-auto">
@@ -57,6 +76,20 @@
         </div>
     </div>
 </section>
+<section id="advert " class=" from-slate-100 to-white bg-gradient-to-b py-12 mb-12">
+    <div  class="container mx-auto">
+      <h2 class="text-2xl font-semibold my-4">Items below {{1000 | currency: "JMD$ "}}</h2>
+      <div class="items flex justify-center gap-12">
+        <div class="item flex flex-col justify-center" *ngFor="let item of [1,2,3,4,5]">
+          <div class="item__img-wrapper bg-white rounded-full overflow-hidden">
+            <img src="assets/images/blue_ray_glass.jpg" alt="image of blue ray glass" class="item__img h-[200px] w-[200px] object-contain">
+          </div>
+          <p class="item__category text-center text-black mt-4 text-lg font-semibold">Fashion</p>
+        </div>
+      </div>
+    
+    </div>
+  </section>
 <section class="cta container mx-auto bg-secondary p-8 rounded-xl">
     <h2 class="text-3xl text-white font-semibold">Pleased with what you see?</h2>
     <p class="text-lg text-white mt-4">Become part of a community that values sustainability, smart shopping, and entrepreneurial spirit</p>

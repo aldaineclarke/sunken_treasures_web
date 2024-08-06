@@ -1,34 +1,40 @@
 .bento-box-3 {
         width: 100%;
         display: grid;
-        min-height: 50vh;
+        height: 70vh;
         gap: 1rem;
         grid-template-areas:
-                "slider slider notice"
-                "slider slider notice2"
-        ;
-}
-
-.bento-box-3>div {
+            "slider slider notice"
+            "slider slider notice2";
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .bento-box-3 > div {
         border-radius: 10px;
-
-}
-
-.bento-box-3>div:nth-child(1) {
+        overflow: hidden; /* Ensures content doesn't overflow the grid area */
+    }
+    
+    .bento-box-3 > div:nth-child(1) {
         grid-area: slider;
         background-color: #5467c8;
-}
-
-.bento-box-3>div:nth-child(2) {
+        min-height: 50vh; /* Use min-height to ensure it doesn't stretch */
+    }
+    
+    .bento-box-3 > div:nth-child(2) {
         grid-area: notice;
         background-color: #59639a;
-}
-
-.bento-box-3>div:nth-child(3) {
+        min-width: 30vw; /* Use min-width to ensure it doesn't stretch */
+        min-height: 25vh; /* Optional: Add min-height to control the vertical size */
+    }
+    
+    .bento-box-3 > div:nth-child(3) {
         grid-area: notice2;
         background-color: #1f93be;
-}
-
+        min-width: 30vw; /* Use min-width to ensure it doesn't stretch */
+        min-height: 25vh; /* Optional: Add min-height to control the vertical size */
+    }
+    
 .categories li,
 .cat-links {
         padding: 5px 10px;

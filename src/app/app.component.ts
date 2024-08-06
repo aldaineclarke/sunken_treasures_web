@@ -26,7 +26,7 @@ export class AppComponent {
       const currentRoute = this.router.url;
       console.log(currentRoute);
       
-      this.showHeaderFooter = !currentRoute.includes('/login');
+      this.showHeaderFooter = !currentRoute.match('[/login][/register]');
     });
   }
 }
