@@ -7,6 +7,7 @@ import { AppComponent } from '@App/app.component';
 import { httpInterceptorProviders } from '@App/interceptors';
 import { SharedModule } from '@Shared/shared.module';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthModule } from './modules/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    AuthModule,
     SharedModule,
     ToastrModule.forRoot({
       positionClass: 'toast-top-right',
