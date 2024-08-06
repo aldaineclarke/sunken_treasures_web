@@ -7,6 +7,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { MiniFooterComponent } from './components/mini-footer/mini-footer.component';
 import { SocialsComponent } from './components/socials/socials.component';
+import { SharedModule } from '@App/shared/shared.module';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { SocialsComponent } from './components/socials/socials.component';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     AuthRoutingModule
   ]
 })

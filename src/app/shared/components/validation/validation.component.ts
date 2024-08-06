@@ -27,23 +27,25 @@ export class ValidationComponent {
 
   remapValidationDictionary(){
     for(let key in this.customValidationObject){
+      console.log(this.control)
 
       if(!(key.includes('{{') || this.customValidationObject[key].includes('}}'))){
       this.validationDictionary.set(key, this.customValidationObject[key]);
+      console.log(this.validationDictionary);
+      console.log(key);
       }
     }
   }
   ngOnInit(){
     
+    this.remapValidationDictionary();
     this.subscription = this.control.valueChanges.subscribe({
       next:(val:string)=>{
         if(val.trim().length == 0 && this.control.hasValidator(Validators.required)){
           this.control.setErrors({required:true})
-          console.log("required");
         }
         else if(val.trim().length < this.minLength){
           this.control.setErrors({minlength: {requiredLength: this.minLength, actualLength: val.trim()}})
-          console.log("hey");
         }
         else if(this.minLength == 0 && this.control.errors?.["minlength"]){
           this.control.setValue(val.trim(),{emitEvent:false});
@@ -52,13 +54,12 @@ export class ValidationComponent {
         }
       }
     });
-    this.remapValidationDictionary();
     
 
   }
 
   ngOnDestroy(){
-    // this.subscription.unsubscribe();
+    this.subscription.unsubscribe();
   }
 
 }
