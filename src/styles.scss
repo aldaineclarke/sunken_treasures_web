@@ -71,3 +71,6 @@ body::-webkit-scrollbar {
 .custom-scrollbar:hover::-webkit-scrollbar-thumb {
     background-color: #256;
 }
+*[routerLink]{
+  cursor:pointer;
+}
