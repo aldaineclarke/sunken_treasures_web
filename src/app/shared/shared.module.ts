@@ -6,10 +6,12 @@ import { ValidationComponent } from './components/validation/validation.componen
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RouterModule } from '@angular/router';
 
 
 const modules = [
   ReactiveFormsModule,
+  RouterModule
 ]
 const declarations = [
   LoadingComponent,
