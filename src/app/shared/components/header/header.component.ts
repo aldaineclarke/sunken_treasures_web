@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  showSearchBox = false;
 
+  showHideSearchBox(){
+    this.showSearchBox = !this.showSearchBox;
+    console.log("Show search box?", this.showSearchBox)
+  }
 }

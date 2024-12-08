@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'home', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)},
-  { path: 'product', loadChildren: () => import('./modules/product/product.module').then(m => m.ProductModule) },
+  { path: 'products', loadChildren: () => import('./modules/product/product.module').then(m => m.ProductModule) },
   { path: '**', redirectTo:"/home"}
 ];
 

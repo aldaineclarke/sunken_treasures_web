@@ -7,7 +7,35 @@
 .lower-header li.active{
     @apply font-semibold text-red-500;
 }
-
-*[routerLink]{
-    cursor:pointer;
+.search-icon{
+    position:absolute;
+    width:40px;
+    height:40px;
+    top: 50%; 
+    transform: translateY(-50%); /* Center vertically */
+    left:0px; /* Start from outside the right of parent */
 }
+
+.search-lng{
+    border: 2px black solid;
+}
+.show-search-box{
+    .search-icon{
+        
+        animation: move-left 300ms linear forwards; 
+    }
+}
+.hide-search-box{
+    .search-icon{
+        animation: move-left 300ms linear reverse; 
+    }
+}
+
+@keyframes move-left {
+    0% {
+      left: 0px; /* Start outside on the left */
+    }
+    100% {
+      left: calc(100% - 50px); /* Move to the far left of the parent */
+    }
+  }
