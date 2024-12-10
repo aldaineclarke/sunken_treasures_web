@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ProductDetailComponent {
 
+  quantity = 1;
+
+  minus(){
+    this.quantity = this.quantity <= 1 ? 1 : this.quantity - 1;
+  }
+  plus(){
+    this.quantity = this.quantity > 10 ? 10 : this.quantity + 1;
+  }
 }
