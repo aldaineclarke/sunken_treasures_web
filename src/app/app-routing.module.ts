@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'home', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)},
   { path: 'products', loadChildren: () => import('./modules/product/product.module').then(m => m.ProductModule) },
+  { path: 'cart', loadChildren: () => import('./modules/cart/cart.module').then(m => m.CartModule) },
   { path: '**', redirectTo:"/home"}
 ];
 
