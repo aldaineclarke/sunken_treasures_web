@@ -3,6 +3,7 @@
 }
 .lower-header  li{
     color:black;
+    cursor: pointer;
 }
 .lower-header li.active{
     @apply font-semibold text-red-500;
