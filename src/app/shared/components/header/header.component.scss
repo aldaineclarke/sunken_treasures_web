@@ -29,6 +29,22 @@
 //     }
 // }
 
+.mobile_right_nav{
+    position: fixed;
+    right:0;
+    top:0;
+    bottom:0;
+    width:60vw;
+    transform: translateX(100%);
+    background-color: whitesmoke;
+    transition: 500ms ease-in-out transform;
+    box-shadow: 2px 4px 4px rgba(221, 221, 221, 0.347);
+
+    &.open{
+        transform: translateX(0);
+    }
+}
+
 @keyframes move-left {
     0% {
       left: 0px; /* Start outside on the left */
