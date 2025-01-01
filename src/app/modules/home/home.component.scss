@@ -67,3 +67,29 @@
                 padding: 0;
         }
 }
+
+@media (max-width : 720px) {
+        .bento-box-3{
+                display:flex;
+                flex-direction: column;
+                height:max-content;
+                padding: 10px;
+
+                & > div.slider, & > div.notice, & > div.notice2{
+                        min-height: unset;
+                }
+        }
+}
+
+.slick-prev:before, .slick-next:before {
+        color:#59639a !important;
+}
+
+.slick-prev {
+        left: 0px !important;
+    }
+
+.slick-initialized .slick-slide{
+        display:flex;
+        justify-content: center;
+}

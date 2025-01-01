@@ -1,4 +1,4 @@
-<section class="mt-2 mx-auto container bento-box-3 overflow-hidden">
+<section class="mt-2 mx-auto container bento-box-3 ">
     <div class="slider">
         <img src="assets/images/main banner.jpg" class="h-full w-full inline-block object-cover object-center" alt="main banner image">
     </div>
@@ -6,14 +6,14 @@
         <img src="assets/images/electronic advert.jpg" class="h-full w-full inline-block object-cover object-center" alt="main banner image">
 
     </div>
-    <div class="otherNotice">
+    <div class="notice2">
         <img src="assets/images/jewelry advert.jpg" class="h-full w-full inline-block object-cover object-center" alt="main banner image">
 
     </div>
 </section>
 <section class="why-choose-us container mx-auto mt-16">
     <h2 class="section-header text-3xl font-bold text-center">Why Sunken Treasures?</h2>
-    <p class="text-center mt-6 w-2/3 mx-auto">Choosing our platform means joining a community dedicated to smart, sustainable, and savvy shopping. With our carefully curated selection of quality second-hand items, you can discover unique treasures at affordable prices, all while contributing to a greener planet.</p>
+    <p class="text-center mt-6 px-2 sm:w-2/3 mx-auto">Choosing our platform means joining a community dedicated to smart, sustainable, and savvy shopping. With our carefully curated selection of quality second-hand items, you can discover unique treasures at affordable prices, all while contributing to a greener planet.</p>
     <div class="cta flex justify-center mt-4">
         <button class="primary-text-btn">Learn More</button>
     </div>
@@ -21,16 +21,26 @@
 <section class="mt-16 bg-slate-100 py-16">
     <div class="container mx-auto">
         <h2 class="section-header text-3xl font-bold text-center">Featured Products</h2>
-        <div class="cards-wrapper overflow-x-scroll custom-scrollbar">
-            <div class="cards flex lg:justify-center gap-4 mt-10 py-4">
-                <app-card *ngFor="let product of [1,2,3,4,5]"></app-card>
-            </div>
+        <div class="cards-wrapper custom-scrollbar mt-6">
+            <ngx-slick-carousel class="carousel" 
+
+                    #slickModal="slick-carousel" 
+                    [config]="{'slidesToScroll': 1, 'slidesToShow': slidesToShow}" 
+                    (init)="slickInit($event)"
+                    (breakpoint)="breakpoint($event)"
+                    (afterChange)="afterChange($event)"
+                    (beforeChange)="beforeChange($event)">
+                    <div ngxSlickItem *ngFor="let slide of slides" class="slide flex justify-center">
+                        <app-card routerLink="/products/details/test"></app-card>
+                    </div>
+        </ngx-slick-carousel>
+            <!-- <div class="cards flex lg:justify-center gap-4 mt-10 py-4">
+            </div> -->
         </div>
         <div class="cta flex justify-center mt-8">
             <button routerLink="/products" class="primary-outline-btn">View All Products</button>
         </div>
     </div>
-
 </section>
 <section >
     <div class="flex h-[80vh]">

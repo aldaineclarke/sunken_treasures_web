@@ -74,3 +74,22 @@ body::-webkit-scrollbar {
 *[routerLink]{
   cursor:pointer;
 }
+
+@media (max-width : 480px) {
+  ngx-slick-carousel app-card .card{
+          transform:scale(0.8);
+  }
+}
+
+.slick-prev:before, .slick-next:before {
+  color:#59639a !important;
+  
+}
+
+.slick-prev {
+  left: 0px !important;
+  z-index:3;
+}
+.slick-next{
+  right:0px !important;
+}
