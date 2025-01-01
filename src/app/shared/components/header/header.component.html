@@ -66,20 +66,36 @@
         </div>
     </div>
     <span class="inline-block bg-gray-200 h-[1px] w-full"></span>
-    <div class="mobile_right_nav" [ngClass]="{'open': sideNavIsOpen}">
-        <ul class="flex flex-col gap-2 p-4">
-            <li class="flex justify-end">
+    <div class="mobile_right_nav" [ngClass]="{'open': !sideNavIsOpen}">
+        <ul class="flex flex-col gap-2 p-4 h-full text-black">
+            <li class="flex items-center justify-between">
+                <div class="signed-in-user flex items-center gap-2 ">
+                    <i class="fa-user-circle fa text-3xl "></i>
+                    <img *ngIf="false" class="h-9 w-9 bg-cover rounded-full overflow-hidden" alt="default image">
+                    <p *ngIf="false"  class="username">Donald</p>
+                    <a class="signInLink hover:underline" >Sign In</a>
+                </div>
                 <button (click)="toggleSideNav()">
                     <svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2.14645 2.85355C1.95118 2.65829 1.95118 2.34171 2.14645 2.14645C2.34171 1.95118 2.65829 1.95118 2.85355 2.14645L8 7.29289L13.1464 2.14645C13.3417 1.95118 13.6583 1.95118 13.8536 2.14645C14.0488 2.34171 14.0488 2.65829 13.8536 2.85355L8.70711 8L13.8536 13.1464C14.0488 13.3417 14.0488 13.6583 13.8536 13.8536C13.6583 14.0488 13.3417 14.0488 13.1464 13.8536L8 8.70711L2.85355 13.8536C2.65829 14.0488 2.34171 14.0488 2.14645 13.8536C1.95119 13.6583 1.95119 13.3417 2.14645 13.1464L7.29289 8L2.14645 2.85355Z" fill="black"/>
                         </svg>
                 </button>
             </li>
-            <li>Login</li>
-            <li>Register</li>
-            <li>Orders</li>
-            <li></li>
-            <li></li>
+            <ng-container *ngIf="showAllDepartments == false; else departments">
+                <li (click)="toggleDepartmentList()">All Departments <i class='bx bx-chevron-right' ></i></li>
+                <li>Accounts</li>
+                <li>Wishlist</li>
+                <li>Orders</li>
+                <hr>
+                <li>Gift Cards</li>
+                <hr>
+                <li class="mt-auto">Help</li>
+                <li>Contact Us</li>
+                <li>Feedback</li>
+            </ng-container>
+            <ng-template #departments>
+                <li (click)="toggleDepartmentList()"><i class="bx bx-chevron-left"></i> Back to Menu.</li>
+            </ng-template>
         </ul>
     </div>
 </header>
