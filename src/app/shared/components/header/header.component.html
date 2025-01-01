@@ -39,7 +39,7 @@
                     0
                 </span>
             </li>
-            <li class="ml-1 cursor-pointer" (click)="toggleSideNav()">
+            <li class="sm:hidden ml-1 cursor-pointer" (click)="toggleSideNav()">
                 <svg width="40" height="40" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 11.5C2.5 11.2239 2.72386 11 3 11H13C13.2761 11 13.5 11.2239 13.5 11.5C13.5 11.7761 13.2761 12 13 12H3C2.72386 12 2.5 11.7761 2.5 11.5Z" fill="black"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 7.5C2.5 7.22386 2.72386 7 3 7H13C13.2761 7 13.5 7.22386 13.5 7.5C13.5 7.77614 13.2761 8 13 8H3C2.72386 8 2.5 7.77614 2.5 7.5Z" fill="black"/>
@@ -52,10 +52,10 @@
 
     
 
-    <div class="lower-header container mx-auto overflow-hidden">
-        <div class="cat-wrapper flex gap-3 items-center py-2">
+    <div class="lower-header container mx-auto">
+        <div class="cat-wrapper flex gap-3 items-center overflow-hidden px-4">
             <!-- <p class="heading bg-black text-white font-semibold p-1">Categories</p> -->
-            <ul class="flex justify-center gap-8 w-full">
+            <ul class="flex overflow-scroll sm:overflow-hidden justify-start sm:justify-center py-2 gap-8 w-full pr-4">
                 <li>Electronics</li>
                 <li>Women</li>
                 <li>Accessories</li>
@@ -66,7 +66,7 @@
         </div>
     </div>
     <span class="inline-block bg-gray-200 h-[1px] w-full"></span>
-    <div class="mobile_right_nav" [ngClass]="{'open': !sideNavIsOpen}">
+    <div class="mobile_right_nav" [ngClass]="{'open': sideNavIsOpen}">
         <ul class="flex flex-col gap-2 p-4 h-full text-black">
             <li class="flex items-center justify-between">
                 <div class="signed-in-user flex items-center gap-2 ">
