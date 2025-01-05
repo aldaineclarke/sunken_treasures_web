@@ -41,6 +41,16 @@
         cursor: pointer;
 }
 
+.overlay{
+        background-color: rgba(0, 0, 0, 0.281);
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        
+}
+
 
 .tabs-nav li:hover {
         @apply bg-accent text-white;
@@ -81,13 +91,7 @@
         }
 }
 
-.slick-prev:before, .slick-next:before {
-        color:#59639a !important;
-}
 
-.slick-prev {
-        left: 0px !important;
-    }
 
 .slick-initialized .slick-slide{
         display:flex;

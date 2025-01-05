@@ -43,23 +43,33 @@
     </div>
 </section>
 <section >
-    <div class="flex h-[80vh]">
-        <div class="fp-advert1" class="relative w-1/2">
-            <img class="w-full h-full object-cover object-center  top-0 left-0" src="assets/images/female-shoes.jpg" alt="image of full width advert">
+    <div class="flex gap-6 md:gap-0 flex-col md:flex-row md:h-[80vh]">
+        <div id="fp-advert1" class="relative h-80 md:h-full md:w-1/2">
+            <div class="overlay flex justify-end items-end p-4">
+                <div class="content">
+                    <button routerLink="/products" class="px-4 py-2 hover:bg-white hover:text-black  duration-300 transition-colors border-2 border-white text-white rounded-xl ">View Women Shoes</button>
+                </div>
+            </div>
+            <img class=" w-full h-full object-cover object-center " src="assets/images/female-shoes.jpg" alt="image of full width advert">
         </div>
-        <div class="fp-advert2" class="relative w-1/2">
-            <img class="w-full h-full object-cover object-center absolute top-0 left-0" src="assets/images/male-shoes.jpg" alt="image of full width advert">
+        <div id="fp-advert2" class="relative h-80 md:h-full md:w-1/2">
+            <div class="overlay flex justify-end items-end p-4">
+                <div class="content">
+                    <button routerLink="/products" class="px-4 py-2 hover:bg-white hover:text-black  duration-300 transition-colors border-2 border-white text-white rounded-xl ">View Men Shoes</button>
+                </div>
+            </div>
+            <img class="w-full h-full object-cover object-center" src="assets/images/male-shoes.jpg" alt="image of full width advert">
         </div>
     </div>
     
 </section>
-<section class="categories mt-10 py-16 hidden">
+<section class="categories mt-10 py-16 ">
     <div class="container mx-auto">
         <h2 class="section-header text-3xl font-bold text-center">Find What You Need in No Time</h2>
-        <p class="mt-6 text-center w-2/3 mx-auto">
+        <p class="mt-6 text-center px-4 sm:px-0 sm:w-2/3 mx-auto">
             Whether you're hunting for a vintage gem or the latest tech gadget, our intuitive filters and smart recommendations make finding your perfect item a breeze. Dive into personalized categories, use dynamic search options, and enjoy a seamless, stress-free shopping experience. 
         </p>
-        <div class="w-full mt-10">
+        <!-- <div class="w-full mt-10">
                 <div class="flex categories-wrapper  min-h-[50vh] p-4 gap-4">
                     <div class="electronic-cat w-[400px] bg-gray-300 flex flex-col p-4">
                         <p class="feature-cat text-2xl text-black my-2 font-medium">Electronics</p>
@@ -83,13 +93,13 @@
                     </div>
                 </div>
                 
-        </div>
+        </div> -->
     </div>
 </section>
-<section id="advert " class="overflow-hidden from-slate-100 to-white bg-gradient-to-b py-12 mb-12">
+<section id="advert " class=" from-slate-100 to-white bg-gradient-to-b py-12 mb-12">
     <div  class="container mx-auto">
-      <h2 class="text-2xl font-semibold my-4">Items below {{1000 | currency: "JMD$ "}}</h2>
-      <div class="items flex justify-center gap-12">
+      <h2 class="text-3xl font-bold my-4 px-4">Shop by Category</h2>
+      <div class="items flex flex-wrap justify-center gap-12">
         <div class="item flex flex-col justify-center" *ngFor="let item of [1,2,3,4,5]">
           <div class="item__img-wrapper bg-white rounded-full overflow-hidden">
             <img src="assets/images/blue_ray_glass.jpg" alt="image of blue ray glass" class="item__img h-[200px] w-[200px] object-contain">
